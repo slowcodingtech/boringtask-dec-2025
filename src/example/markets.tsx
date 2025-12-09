@@ -11,7 +11,9 @@ export const Markets = () => {
 
   return (
     <div>
-      {markets?.map((market) => <div key={market.name}>{market.name}</div>)}
+      {markets?.map((market) => (
+        <div key={market.name}>{market.name}</div>
+      ))}
     </div>
   );
 };
