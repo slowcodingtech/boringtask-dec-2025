@@ -29,6 +29,8 @@ Data (see `API` section for more details):
 - Current market stats `price` is returned by the API endpoint `GET /api/v1/markets/:market/stats`.
 - Order should be submitted to the API endpoint `POST /api/v1/orders`.
 - Order Book has no API and should be managed on the client side only (in-memory).
+- You should use mock data for the API with some randomization for a market price
+  (no need to add any BE here, `Mock Service Worker` library or even a simple `Promise` with a const data should be just fine).
 
 UI schema:
 ```
@@ -58,8 +60,7 @@ UI schema:
 - You should prefer to have better UX over better UI.
 - Amount inputs should be formatted according to the market assets precision.
 - `Market selector` state and the last `synthetic amount` used should be persisted between page reloads.
-- You should use mock data for the API with some randomization for a market price
-  (no need to add any BE here, `Mock Service Worker` library or even a simple `Promise` with a const data should be just fine).
+- Market price should be updated every 5 seconds.
 - You should ensure that your implementation is correct by providing basic tests.
 
 **Please raise any questions/concerns if something is not clear.**
